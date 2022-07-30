@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -41,9 +42,15 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+    def kotlin_version = "1.6.21"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     //Dagger dependencies
-    def dagger_version = "2.43.1"
+    def dagger_version = "2.40.5"
     implementation "com.google.dagger:dagger:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
 }
