@@ -20,8 +20,6 @@ class MyApplication : Application() {
         super.onCreate()
         applicationComponent = DaggerApplicationComponent.builder().build()
         applicationComponent.inject(this)
-        Log.i(TAG, "onCreate: ${user.username} ${user.password}")
-        Toast.makeText(this, "${user.username} ${user.password}", Toast.LENGTH_SHORT).show()
     }
 
 
