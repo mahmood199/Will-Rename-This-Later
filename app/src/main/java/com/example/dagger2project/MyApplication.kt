@@ -9,19 +9,22 @@ import javax.inject.Inject
 class MyApplication : Application() {
 
     lateinit var applicationComponent: ApplicationComponent
+
     companion object {
         private const val TAG = "MyApplication"
     }
 
     @Inject
-    lateinit var user : User
+    lateinit var user: User
 
     override fun onCreate() {
         super.onCreate()
-        applicationComponent = DaggerApplicationComponent.builder().build()
+        applicationComponent = DaggerApplicationComponent
+            .builder()
+            .applicationModule(ApplicationModule())
+            .build()
         applicationComponent.inject(this)
     }
-
 
 
 }

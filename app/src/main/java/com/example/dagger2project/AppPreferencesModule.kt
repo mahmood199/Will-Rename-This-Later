@@ -7,12 +7,11 @@ import dagger.Provides
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
 @Module
-class AppPreferencesModule @Inject constructor(@ApplicationContext context: Context) {
+object AppPreferencesModule {
 
     @Provides
     @Singleton
-    fun provideAppPreferences(context: Context) =  AppPreferences(context)
+    fun provideAppPreferences(context: Context) = AppPreferences(context)
 
 }
