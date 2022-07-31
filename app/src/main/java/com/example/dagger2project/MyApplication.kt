@@ -3,6 +3,7 @@ package com.example.dagger2project
 import android.app.Application
 import android.util.Log
 import android.widget.Toast
+import com.example.dagger2project.data.local.sharedPreference.AppPreferences
 import com.example.dagger2project.models.User
 import javax.inject.Inject
 

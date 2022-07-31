@@ -1,13 +1,13 @@
 package com.example.dagger2project.models
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import com.example.dagger2project.Password
+import com.example.dagger2project.UserName
+import javax.inject.Inject
 
 
-@Parcelize
-data class User(
-    val username: String = "Mahmood",
-    val password: String = "Password_69"
-) : Parcelable {
+data class User @Inject constructor(
+    @UserName val username: String,
+    @Password val password: String
+) {
 
 }
