@@ -8,10 +8,17 @@ import javax.inject.Singleton
 @Module
 class ApplicationModule {
 
+
     @Provides
-    @Singleton
-    fun provideUser(): User {
-        return User()
+    @UserName
+    fun provideUserName(): String {
+        return "Mahmood Ahmad"
+    }
+
+    @Provides
+    @Password
+    fun providePassword(): String {
+        return "Password_69"
     }
 
 }

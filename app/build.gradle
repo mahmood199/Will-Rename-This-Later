@@ -32,7 +32,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }
@@ -57,5 +57,31 @@ dependencies {
 
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    //RecyclerView Dependency
+    def recyclerview = "1.2.1"
+    def recyclerview_item_selection = "1.1.0"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview"
+    implementation "androidx.recyclerview:recyclerview-selection:$recyclerview_item_selection"
+
+    //CardView Dependency
+    def card_view = "1.0.0"
+    implementation "androidx.cardview:cardview:$card_view"
+
+    //Retrofit
+    def retrofit = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+
+    //OKHTTP
+    def okHttp = "4.7.2"
+    def okHttp_interceptor = "3.12.12"
+    implementation "com.squareup.okhttp3:okhttp:$okHttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_interceptor"
+
+    //Glide
+    def glide = "2.9.0"
+    implementation "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
 
 }
